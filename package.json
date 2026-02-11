@@ -1,0 +1,16 @@
+{
+  "name": "taskapi",
+  "version": "1.0.0",
+  "description": "Simple REST API for todo management",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {}
+}
