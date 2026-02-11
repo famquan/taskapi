@@ -1,5 +1,6 @@
 const express = require('express');
 const { getDb } = require('./db');
+const todosRouter = require('./routes/todos');
 
 const app = express();
 app.use(express.json());
@@ -11,8 +12,8 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// TODO: Add todo CRUD routes here
-// Routes will be added by agents via feature branches
+// Todo routes
+app.use('/api/todos', todosRouter);
 
 app.listen(PORT, () => {
   console.log(`TaskAPI running on http://localhost:${PORT}`);
